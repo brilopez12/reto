@@ -6,25 +6,26 @@ function convertir(){
 
 function actboton(){
   let boton = document.getElementById("boton");
-  boton.disabled=false;
+  boton.disabled = false;
 }
 
-function registro(){
-  let resgistro= document.getElementById("radio1");
-  let div_registro= document.getElementById("si_registro");
-  if(resgistro.checked){
-    div_registro.innerHTML=`
-    <div class="form-check">
-      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-      <label class="form-check-label" for="flexCheckDefault">Modalidad 1</label>
-    </div>
-    <div class="form-check">
-      <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
-      <label class="form-check-label" for="flexCheckChecked">Modalidad 2</label>
-   </div>
+function registro() {
+  let registro = document.getElementById("radio2"); // Cambiado de radio1 a radio2
+  let div_registro = document.getElementById("si_registro");
+
+  if (registro.checked) {
+    div_registro.innerHTML = "";
+  } else {
+    div_registro.innerHTML = `
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+        <label class="form-check-label" for="flexCheckDefault">Modalidad 1</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+        <label class="form-check-label" for="flexCheckChecked">Modalidad 2</label>
+      </div>
     `;
-  }else{
-    div_registro.innerHTML=``;
   }
 }
 
